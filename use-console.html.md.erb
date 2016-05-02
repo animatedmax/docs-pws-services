@@ -26,7 +26,7 @@ Follow the steps below to access the Services Marketplace.
 
     <%= image_tag("images/console-service/mp-link.png") %>
 
-<p class="note"><strong>Note</strong>: You can also access the Services Marketplace from a Space page or from an App Dashboard.</p>
+<p class="note"><strong>Note</strong>: You can also access the Services Marketplace from the space page or the app page.</p>
 
 ##<a id='create-instance'></a>Step 2: Creating and Configuring a Service Instance ##
 
@@ -55,6 +55,8 @@ Follow the steps below to create and configure an instance of a service.
 
     <%= image_tag("images/console-service/configure-instance.png") %>
 
+    <p class="note"><strong>Note</strong>: Some services do not support binding. If a service does not support binding, the <strong>Bind to App</strong> drop-down list will not appear.</p>
+
 ##<a id='bind-instance'></a>Step 3: Binding a Service Instance to an Application ##
 
 Follow the steps below to bind an existing service instance to an application.
@@ -63,23 +65,15 @@ Follow the steps below to bind an existing service instance to an application.
 
     <%= image_tag("images/console-service/space-link.png") %>
 
-1. In the **Apps** table of the Space page, click the row
-listing the application you want to bind. This opens the App Dashboard.
+1. In the **Services** table of the space page, click the row listing the service instance you want to bind.
 
-    <%= image_tag("images/console-service/select-app.png") %>
+    <%= image_tag("images/console-service/services-space.png") %>
 
-1. On the App Dashboard, select the **Services** tab.
+1. On the service instance page, click **Bind Apps** if the service instance has no bindings and **Edit Bindings** if the service instance has bindings.
 
-    <%= image_tag("images/console-service/app-panel.png") %>
+    <%= image_tag("images/console-service/services-binding.png") %>
 
-1. In the Services panel, click **Bind a Service**.
+1. Select the checkbox for the app or apps you want to bind to your service instance.
+1. Click **Save**.
 
-    <%= image_tag("images/console-service/bind-service.png") %>
-
-1. Select a service from the **Select a service** drop-down.
-
-    <%= image_tag("images/console-service/select-service.png") %>
-
-1. Click Bind.
-
-    <%= image_tag("images/console-service/bind.png") %>
+<p class="note"><strong>Note</strong>: Service bindings and unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with <code>cf restage</code> from the cf Command Line Interface (CLI).</p>
